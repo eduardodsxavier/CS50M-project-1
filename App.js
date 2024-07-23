@@ -61,6 +61,9 @@ export default function App() {
           <Pressable 
 	    style={styles.button}
 	    onPress={() => {
+    	      if(isNaN(parseInt(focusTime))){
+		setFocusTime(25)
+	      }
 	      setCounting(!counting)
             }}
 	  >
@@ -108,6 +111,9 @@ export default function App() {
           <Pressable 
 	    style={styles.button}
 	    onPress={() => {
+            if(isNaN(parseInt(relaxTime))){
+		setRelaxTime(5)
+	      }
 	      setCounting(!counting)
             }}
 	  >
